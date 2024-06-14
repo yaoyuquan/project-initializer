@@ -1,18 +1,15 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.yaoyuquan.projectinitializer</id>
-    <name>project-initializer</name>
-    <vendor>yaoyuquan</vendor>
+    <name>Project Initializer</name>
+    <vendor url="https://toguide.cn">图观（天津）数字科技有限公司</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.yaoyuquan.projectinitializer.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <moduleBuilder builderClass="cn.toguide.initializer.wizard.ProjectModuleTypeBuilder"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.yaoyuquan.projectinitializer.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    
 </idea-plugin>

@@ -1,0 +1,220 @@
+[
+  {
+    "name": "Spring-Boot",
+    "description": "spring boot基础组件",
+    "values": [
+      {
+        "id": "web",
+        "name": "spring-boot-starter-web",
+        "description": "web工程基本依赖"
+      },
+      {
+        "id": "data-redis",
+        "name": "spring-boot-starter-redis",
+        "description": "使用spring-boot redis的依赖"
+      }
+    ]
+  },
+  {
+    "name": "Spring-Cloud",
+    "description": "提供了spring cloud微服务的基本组件",
+    "values": [
+      {
+        "id": "spring-cloud-starter-alibaba-nacos-discovery",
+        "name": "spring-cloud-starter-alibaba-nacos-discovery",
+        "description": "使用nacos进行服务注册发现"
+      },
+      {
+        "id": "spring-cloud-starter-alibaba-nacos-config",
+        "name": "spring-cloud-starter-alibaba-nacos-config",
+        "description": "使用nacos配置中心的应用配置功能"
+      }
+    ]
+  },
+  {
+    "name": "Sql",
+    "description": "数据库操作相关依赖",
+    "values": [
+      {
+        "id": "ojdbc",
+        "name": "ojdbc",
+        "description": "oracle数据库驱动"
+      },
+      {
+        "id": "mysql",
+        "name": "mysql",
+        "description": "mysql数据库驱动"
+      },
+      {
+        "id": "mybatis",
+        "name": "mybatis",
+        "description": "mybatis依赖"
+      }
+    ]
+  },
+  {
+    "name": "TG-Common",
+    "description": "功能代码，以工具类的形式为程序提供加解密、多数据源使用、JSON处理等代码功能，程序通过pom引用添加jar包到工程目录中。",
+    "values": [
+      {
+        "id": "tg-common-crypto",
+        "name": "tg-common-crypto",
+        "description": "后端加解密组件，包括常用对称加密算法、非对称加密算法、摘要算法、密钥混淆、国密SM2、SM3、SM4工具类。"
+      },
+      {
+        "id": "tg-common-tools",
+        "name": "tg-common-tools",
+        "description": "通用组件，包括常用工具类、基类、统一响应处理、统一异常处理等"
+      },
+      {
+        "id": "tg-common-jasypt",
+        "name": "tg-common-jasypt",
+        "description": "配置文件加密处理"
+      },
+      {
+        "id": "tg-common-multi-datasource",
+        "name": "tg-common-multi-datasource",
+        "description": "多数据源配置"
+      },
+      {
+        "id": "tg-common-file",
+        "name": "tg-common-file",
+        "description": "minio、obs、oss等对象存储工具的抽象接口以及对应的实现"
+      }
+    ]
+  },
+  {
+    "name": "TG-Framework",
+    "description": "功能框架，使用Spring Bean的形式将功能以依赖注入的方式添加到程序中，程序可通过注解或Bean加载等形式使用功能框架。",
+    "values": [
+      {
+        "id": "tg-framework-isc",
+        "name": "tg-framework-isc",
+        "description": "实现对isc服务的相关调用，封装了角色，资源，人员信息的查询，登入登出等功能"
+      },
+      {
+        "id": "tg-framework-limit",
+        "name": "tg-framework-limit",
+        "description": "根据注解控制配置，实现接口限流功能"
+      },
+      {
+        "id": "tg-framework-dialog",
+        "name": "tg-framework-dialog",
+        "description": "智能对话组件"
+      },
+      {
+        "id": "tg-framework-logcollect",
+        "name": "tg-framework-logcollect",
+        "description": "收集服务日志发送到redis/kafka"
+      },
+      {
+        "id": "tg-framework-securelog",
+        "name": "tg-framework-securelog",
+        "description": "三方测试"
+      },
+      {
+        "id": "tg-framework-workflow",
+        "name": "tg-framework-workflow",
+        "description": "基于Flowable封装的工作流组件,提供bpmn模型管理,任务的处理、驳回、回退等功能。"
+      }
+    ]
+  },
+  {
+    "name": "TG-Embed",
+    "description": "代码功能，以代码文件、代码片段等形式微程序提供标准代码管理、角色权限管理、审计日志管理等功能，程序通过代码文件引用到工程目录或Class中。",
+    "values": [
+      {
+        "id": "tg-embed-code",
+        "name": "tg-embed-code",
+        "description": "标准代码"
+      },
+      {
+        "id": "tg-embed-user",
+        "name": "tg-embed-user",
+        "description": "用户管理"
+      },
+      {
+        "id": "tg-embed-role",
+        "name": "tg-embed-role",
+        "description": "角色管理"
+      },
+      {
+        "id": "tg-embed-securelog",
+        "name": "tg-embed-securelog",
+        "description": "提供安全审计日志记录标准写法"
+      }
+    ]
+  },
+  {
+    "name": "TG-API",
+    "description": "API，与TG-Service服务配合使用，提供使用微服务的的标准调用API，程序可通过@Feign形式使用，通过pom引用添加jar包到工程目录中。",
+    "values": [
+      {
+        "id": "tg-api-workflow",
+        "name": "tg-api-workflow",
+        "description": "基于TG-Service-Workflow实现的Fegin客户端远程调用"
+      },
+      {
+        "id": "tg-api-securelog",
+        "name": "tg-api-securelog",
+        "description": "提供审计日志服务feign调用和公共实体"
+      }
+    ]
+  },
+  {
+    "name": "TG-Service",
+    "description": "服务，以微服务的形式存在和运行，提供RESTfu接口供程序调用使用。",
+    "values": [
+      {
+        "id": "tg-service-i6000",
+        "name": "tg-service-i6000",
+        "description": "提供I6000接入的基本框架，需要项目实现具体指标的代码"
+      },
+      {
+        "id": "tg-service-audio",
+        "name": "tg-service-audio",
+        "description": "基于FFmpeg封装的音视频转码服务，支持wav、mp3、pcm、m4a、amr、mp4等常见多媒体格式转换。"
+      },
+      {
+        "id": "tg-service-logcollect",
+        "name": "tg-service-logcollect",
+        "description": "与“日志采集组件”配套，将发送到redis/kafka中的服务日志发送到ES中"
+      },
+      {
+        "id": "tg-service-gateway",
+        "name": "tg-service-gateway",
+        "description": "微服务网关。包含XSS过滤，加解密，登录验证等"
+      },
+      {
+        "id": "tg-service-system",
+        "name": "tg-service-system",
+        "description": "标准代码，用户管理，角色管理，菜单管理"
+      },
+      {
+        "id": "tg-service-transfer-inner",
+        "name": "tg-service-transfer-inner",
+        "description": "强隔离穿透内网服务"
+      },
+      {
+        "id": "tg-service-transfer-outer",
+        "name": "tg-service-transfer-outer",
+        "description": "强隔离穿透外网服务"
+      },
+      {
+        "id": "tg-service-workflow",
+        "name": "tg-service-workflow",
+        "description": "提供Workflow的http-API支持(需要引入TG-Workflow-biz)"
+      },
+      {
+        "id": "tg-service-securegateway",
+        "name": "tg-service-securegateway",
+        "description": "三方测试安全网关服务"
+      },
+      {
+        "id": "tg-service-securelog",
+        "name": "tg-service-securelog",
+        "description": "三方测试审计日志服务，包括审计策略、审计日志列表、审计统计图表"
+      }
+    ]
+  }
+]
